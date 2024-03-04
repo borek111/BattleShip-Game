@@ -1,0 +1,28 @@
+C:\Users\Student\Desktop\Projekty\Klasa 2e2\c#\statki\bin\Debug\statki.exe.config
+C:\Users\Student\Desktop\Projekty\Klasa 2e2\c#\statki\bin\Debug\statki.exe
+C:\Users\Student\Desktop\Projekty\Klasa 2e2\c#\statki\bin\Debug\statki.pdb
+C:\Users\Student\Desktop\Projekty\Klasa 2e2\c#\statki\obj\Debug\statki.csproj.AssemblyReference.cache
+C:\Users\Student\Desktop\Projekty\Klasa 2e2\c#\statki\obj\Debug\statki.csproj.CoreCompileInputs.cache
+C:\Users\Student\Desktop\Projekty\Klasa 2e2\c#\statki\obj\Debug\statki.exe
+C:\Users\Student\Desktop\Projekty\Klasa 2e2\c#\statki\obj\Debug\statki.pdb
+E:\szkoła\c#\statki\bin\Debug\statki.exe.config
+E:\szkoła\c#\statki\bin\Debug\statki.exe
+E:\szkoła\c#\statki\bin\Debug\statki.pdb
+E:\szkoła\c#\statki\obj\Debug\statki.csproj.AssemblyReference.cache
+E:\szkoła\c#\statki\obj\Debug\statki.csproj.CoreCompileInputs.cache
+E:\szkoła\c#\statki\obj\Debug\statki.exe
+E:\szkoła\c#\statki\obj\Debug\statki.pdb
+D:\szkoła\c#\statki\bin\Debug\statki.exe.config
+D:\szkoła\c#\statki\bin\Debug\statki.exe
+D:\szkoła\c#\statki\bin\Debug\statki.pdb
+D:\szkoła\c#\statki\obj\Debug\statki.csproj.AssemblyReference.cache
+D:\szkoła\c#\statki\obj\Debug\statki.csproj.CoreCompileInputs.cache
+D:\szkoła\c#\statki\obj\Debug\statki.exe
+D:\szkoła\c#\statki\obj\Debug\statki.pdb
+C:\kopia USB\szkoła\c#\statki\bin\Debug\statki.exe.config
+C:\kopia USB\szkoła\c#\statki\bin\Debug\statki.exe
+C:\kopia USB\szkoła\c#\statki\bin\Debug\statki.pdb
+C:\kopia USB\szkoła\c#\statki\obj\Debug\statki.csproj.AssemblyReference.cache
+C:\kopia USB\szkoła\c#\statki\obj\Debug\statki.csproj.CoreCompileInputs.cache
+C:\kopia USB\szkoła\c#\statki\obj\Debug\statki.exe
+C:\kopia USB\szkoła\c#\statki\obj\Debug\statki.pdb

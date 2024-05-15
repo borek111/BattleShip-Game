@@ -140,11 +140,11 @@ namespace statki
             }
 
             Console.Clear();
-            Console.WriteLine("Wszystkie statki pomyślnie umieszczone!");
-            Console.WriteLine("Pozycje twoich statków: ");
+            Console.WriteLine("All ships successfully placed!");
+            Console.WriteLine("The positions of your ships: ");
             ShipsBoard.Display();
             ClearForbiddenAreas();
-            Console.WriteLine("Aby kontynuować naciśnij enter");
+            Console.WriteLine("Press enter to continue ");
             Console.ReadLine();
         }
 

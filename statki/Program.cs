@@ -9,8 +9,8 @@ namespace statki
         public static Player player2;
         public static int player1Wins = 0;
         public static int player2Wins = 0;
-        public static List<string> player1Shots = new List<string>(); // List of shots taken by player 1
-        public static List<string> player2Shots = new List<string>(); // List of shots taken by player 2
+        public static List<string> player1Shots = new List<string>();
+        public static List<string> player2Shots = new List<string>(); 
 
         static void Main(string[] args)
         {
@@ -58,7 +58,7 @@ namespace statki
 
             while (true)
             {
-                Console.Clear(); // Clear your console before displaying the board
+                Console.Clear(); 
                 if (player1Turn)
                 {
                     Console.WriteLine("Player 1's turn:");
@@ -67,16 +67,16 @@ namespace statki
                     do
                     {
                         Console.WriteLine("Player 1, enter coordinates to shoot (e.g., A5):");
-                        input = Console.ReadLine().ToUpper(); // Read the input and convert to uppercase
-                        if (player1Shots.Contains(input) == true) // Check if the shot has already been taken
+                        input = Console.ReadLine().ToUpper(); 
+                        if (player1Shots.Contains(input) == true) 
                         {
                             Console.WriteLine("You already shot in this location.");
                             Console.WriteLine("Press Enter to continue...");
                             Console.ReadLine();
                         }
                     }
-                    while (!ValidateInput(input) || player1Shots.Contains(input)); // Check that the shot is correct and has not already been taken
-                    player1Shots.Add(input); // Add the shot to the shot list
+                    while (!ValidateInput(input) || player1Shots.Contains(input));
+                    player1Shots.Add(input);
                     Shoot(player2, player1, input); // Player 1 shoots at player 2
                     Console.Clear();
                     Console.WriteLine("Press Enter when player 2 is ready to continue...");
@@ -90,16 +90,16 @@ namespace statki
                     do
                     {
                         Console.WriteLine("Player 2, enter coordinates to shoot (e.g., A5):");
-                        input = Console.ReadLine().ToUpper(); // Read the input and convert to uppercase
-                        if (player2Shots.Contains(input)) // Check if the shot has already been taken
+                        input = Console.ReadLine().ToUpper(); 
+                        if (player2Shots.Contains(input)) 
                         {
                             Console.WriteLine("You already shot in this location.");
                             Console.WriteLine("Press Enter to continue...");
                             Console.ReadLine();
                         }
                     }
-                    while (!ValidateInput(input) || player2Shots.Contains(input)); // Check that the shot is correct and has not already been taken
-                    player2Shots.Add(input); // Add the shot to the shot list
+                    while (!ValidateInput(input) || player2Shots.Contains(input));
+                    player2Shots.Add(input); 
                     Shoot(player1, player2, input); // Player 2 shoots at player 1
                     Console.Clear();
                     Console.WriteLine("Press Enter when player 1 is ready to continue...");
@@ -124,10 +124,9 @@ namespace statki
             // Parse the input to get the row and column
             if (input.Length >= 2 && char.IsLetter(input[0]) && char.IsDigit(input[1]))
             {
-                int col = input[0] - 'A'; // Convert column letter to numeric value (A=0, B=1, ...)
-                int row = int.Parse(input.Substring(1)) - 1; // Get the row number and adjust to 0-based index
+                int col = input[0] - 'A'; 
+                int row = int.Parse(input.Substring(1)) - 1;
 
-                // Check if the coordinates are within the board range
                 if (row >= 0 && row < 10 && col >= 0 && col < 10)
                     return true;
             }
@@ -142,7 +141,7 @@ namespace statki
             int row = coords[0];
             int col = coords[1];
 
-            Console.WriteLine(targetPlayer == player1 ? "Player 2's turn:" : "Player 1's turn:"); //re-writing who the round is when several shots are fired
+            Console.WriteLine(targetPlayer == player1 ? "Player 2's turn:" : "Player 1's turn:");
 
             // Add the shot to the list of shots taken
             if (shootingPlayer == player1)
@@ -154,8 +153,8 @@ namespace statki
             // Check if the shot hits a ship on the target player's ships board
             if (targetPlayer.ShipsBoard.Grid[row, col] == 'S')
             {
-                shootingPlayer.TargetBoard.Grid[row, col] = 'X'; // Hit na tym ustwiac missy
-                targetPlayer.ShipsBoard.Grid[row, col] = 'X'; // Hit on the enemy's ships board
+                shootingPlayer.TargetBoard.Grid[row, col] = 'X'; 
+                targetPlayer.ShipsBoard.Grid[row, col] = 'X'; 
                 shootingPlayer.DisplayBoards(); // Show the boards after hit
                 Console.WriteLine("Hit!");
               
@@ -165,26 +164,25 @@ namespace statki
                     return; // End the current game loop
                 }
 
-                // Allow the player to shoot again
                 Console.WriteLine("You can shoot again because you hit the enemy's ship.");
                 string nextInput;
                 do
                 {
                     Console.WriteLine("Enter coordinates to shoot again (e.g., A5)");
-                    nextInput = Console.ReadLine().ToUpper(); // Read the input and convert to uppercase
+                    nextInput = Console.ReadLine().ToUpper();
 
                     if (!ValidateInput(nextInput))
                     {
                         Console.WriteLine("Invalid input format. Please enter coordinates in the format 'A5' within the range A-J and 1-10.");
                         continue;
                     }
-                    if (shootingPlayer.TargetBoard.Grid[ParseCoordinates(nextInput)[0], ParseCoordinates(nextInput)[1]] != '-') // Check if the cell was already shot
+                    if (shootingPlayer.TargetBoard.Grid[ParseCoordinates(nextInput)[0], ParseCoordinates(nextInput)[1]] != '-') 
                     {
                         Console.WriteLine("You already shot in this location.");
                         continue;
                     }
 
-                    // If the input is valid and the cell was not previously shot, shoot again
+                    
                     Shoot(targetPlayer, shootingPlayer, nextInput);
                     return;
                 } while (true);
